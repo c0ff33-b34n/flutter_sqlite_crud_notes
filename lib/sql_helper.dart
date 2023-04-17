@@ -63,7 +63,7 @@ class SQLHelper {
   }
 
   // delete an item
-  static Future<void> deleteItem(int id) async {
+  static Future<void> deleteNote(int id) async {
     final db = await SQLHelper.db();
     try {
       await db.delete(tableName, where: "id = ?", whereArgs: [id]);
